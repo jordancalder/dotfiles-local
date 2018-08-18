@@ -1,0 +1,19 @@
+[user]
+  name = Jordan Calder
+  email = jordan@brightbytes.net
+[branch "master"]
+  mergeoptions = --no-ff
+[push]
+  default = simple
+[remote "origin"]
+  push = HEAD
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  grep = auto
+  interactive = auto
+[ui]
+  interactive = auto
+[branch]
+  autosetuprebase = always

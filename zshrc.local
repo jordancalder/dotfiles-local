@@ -1,0 +1,63 @@
+# vars
+  HISTFILE=~/dotfiles-local/zsh_history.local
+  SAVEHIST=1000
+  setopt inc_append_history
+  setopt share_history
+
+  git config --global push.default current
+
+# settings
+  export VISUAL=vim
+
+  export ZSH=/Users/sterlingcalder/.oh-my-zsh
+  ZSH_THEME="agnoster"
+
+  plugins=(git)
+
+  source $ZSH/oh-my-zsh.sh
+
+  source ~/.bin/tmuxinator.zsh
+
+  test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+  [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+  source ~/.global-env
+
+# For vim mappings: 
+  stty -ixon
+
+# Completions
+# These are all the plugin options available: https://github.com/robbyrussell/oh-my-zsh/tree/291e96dcd034750fbe7473482508c08833b168e3/plugins
+#
+# Edit the array below, or relocate it to ~/.zshrc before anything is sourced
+# For help create an issue at github.com/parth/dotfiles
+
+autoload -U compinit
+
+plugins=(
+  asdf
+)
+
+for plugin ($plugins); do
+    fpath=($ZSH/plugins/$plugin $fpath)
+done
+
+compinit
+
+source $ZSH/lib/history.zsh
+source $ZSH/lib/key-bindings.zsh
+source $ZSH/lib/completion.zsh
+
+if [[ "${terminfo[kcuu1]}" != "" ]]; then
+   autoload -U up-line-or-beginning-search
+   zle -N up-line-or-beginning-search
+   bindkey "${terminfo[kcuu1]}" up-line-or-beginning-search
+fi
+
+if [[ "${terminfo[kcud1]}" != "" ]]; then
+  autoload -U down-line-or-beginning-search
+  zle -N down-line-or-beginning-search
+  bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
+fi
+
