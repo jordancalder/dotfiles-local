@@ -9,7 +9,7 @@
 # settings
   export VISUAL=vim
 
-  export ZSH=/Users/sterlingcalder/.oh-my-zsh
+  export ZSH=$HOME/.oh-my-zsh
   ZSH_THEME="agnoster"
 
   plugins=(git)
@@ -61,3 +61,5 @@ if [[ "${terminfo[kcud1]}" != "" ]]; then
   bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
 fi
 
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash

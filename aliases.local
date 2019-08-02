@@ -1,1 +1,5 @@
 alias v="vim -p"
+alias clarity="cd ~/code/clarity"
+alias cew="cd ~/code/clarity_early_warning"
+alias csd="cd ~/code/clarity_survey_data"
+alias alchemy="cd ~/code/alchemy"
