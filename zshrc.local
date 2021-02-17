@@ -69,3 +69,8 @@ fi
 
 export PG_BIN_PATH="/Applications/Postgres.app/Contents/Versions/9.6/bin"
 export PATH=$PG_BIN_PATH:$PATH
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+export PATH="/usr/local/opt/openssl/bin:$PATH"
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
+export GOPATH=$HOME/Go
+export PATH=$PATH:$GOPATH/bin

@@ -1,6 +1,6 @@
 [user]
   name = Jordan Calder
-  email = jordan@brightbytes.net
+  email = jordancalder@gmail.com
 [branch "master"]
   mergeoptions = --no-ff
 [push]

@@ -3,3 +3,4 @@ set -g prefix `
 bind-key ` send-prefix
 
 set -g mouse on
+set -g pane-base-index 1
