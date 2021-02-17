@@ -1,5 +1,3 @@
-# vars
-  HISTFILE=~/dotfiles-local/zsh_history.local
   SAVEHIST=1000
   setopt inc_append_history
   setopt share_history
@@ -61,5 +59,13 @@ if [[ "${terminfo[kcud1]}" != "" ]]; then
   bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
 fi
 
+if [[ "${terminfo[kcud1]}" != "" ]]; then
+  bindkey "^[^[[D" backward-word
+  bindkey "^[^[[C" forward-word
+fi
+
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
+
+export PG_BIN_PATH="/Applications/Postgres.app/Contents/Versions/9.6/bin"
+export PATH=$PG_BIN_PATH:$PATH

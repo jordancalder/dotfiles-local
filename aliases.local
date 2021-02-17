@@ -3,3 +3,6 @@ alias clarity="cd ~/code/clarity"
 alias cew="cd ~/code/clarity_early_warning"
 alias csd="cd ~/code/clarity_survey_data"
 alias alchemy="cd ~/code/alchemy"
+alias be="bundle exec"
+alias mux=tmuxinator
+alias ms="tmuxinator start"
