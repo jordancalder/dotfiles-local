@@ -6,3 +6,9 @@ alias alchemy="cd ~/code/alchemy"
 alias be="bundle exec"
 alias mux=tmuxinator
 alias ms="tmuxinator start"
+
+alias gcaa="git commit -a --amend -C HEAD"
+alias gri="!f() { git rebase -i HEAD~$1  }; f"
+alias bclean="!f() { git branch --merged ${1-master} | grep -v " ${1-master}$"
+| xargs -r git branch -d; }; f"
+alias gla="git config -l | grep alias | cut -c 7-"
